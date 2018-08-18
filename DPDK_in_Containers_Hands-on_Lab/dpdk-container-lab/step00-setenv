@@ -22,8 +22,8 @@
 # Author: Clayne B. Robison <clayne dot b dot robison at intel dot com>
 
 
-DPDK_VERSION="/home/ubuntu/dpdk-stable-16.11.1"
-OVS_VERSION="/home/ubuntu/openvswitch-2.6.1"
+DPDK_VERSION="/home/ubuntu/dpdk-stable-18.02.2"
+OVS_VERSION="/home/ubuntu/openvswitch-2.9.2"
 export RTE_SDK="/home/ubuntu/dpdk"
 export OVS_DIR="/home/ubuntu/ovs"
 
