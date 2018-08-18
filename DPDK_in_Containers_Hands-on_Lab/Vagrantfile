@@ -74,7 +74,7 @@ Vagrant.configure("2") do |config|
 	mkdir /home/vagrant/training
 	git init DPDK_in_Containers_Hands-on_Lab
 	cd DPDK_in_Containers_Hands-on_Lab
-	git remote add origin https://github.com/intel/SDN-NFV-Hands-on-Samples-1.git
+	git remote add origin https://github.com/yazdanidelaram/SDN-NFV-Hands-on-Samples-1.git
 	git config core.sparsecheckout true
 	echo "DPDK_in_Containers_Hands-on_Lab" >> .git/info/sparse-checkout
 	git pull origin master
