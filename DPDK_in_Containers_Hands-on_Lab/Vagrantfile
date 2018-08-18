@@ -71,23 +71,23 @@ Vagrant.configure("2") do |config|
         curl -sO http://openvswitch.org/releases/openvswitch-2.9.2.tar.gz
 	tar xf dpdk-18.02.2.tar.xz
 	tar xzf openvswitch-2.9.2.tar.gz
-	mkdir /home/ubuntu/training
+	mkdir /home/vagrant/training
 	git init DPDK_in_Containers_Hands-on_Lab
 	cd DPDK_in_Containers_Hands-on_Lab
 	git remote add origin https://github.com/intel/SDN-NFV-Hands-on-Samples-1.git
 	git config core.sparsecheckout true
 	echo "DPDK_in_Containers_Hands-on_Lab" >> .git/info/sparse-checkout
 	git pull origin master
-	mv DPDK_in_Containers_Hands-on_Lab/dpdk-container-lab /home/ubuntu/training
-	cd /home/ubuntu
-	mv pktgen-dpdk /home/ubuntu/training/dpdk-container-lab/docker-build/pktgen/
-	mv /home/ubuntu/training/dpdk-container-lab/docker-build/pktgen/pktgen-dpdk /home/ubuntu/training/dpdk-container-lab/docker-build/pktgen/pktgen
-	cp -r /home/ubuntu/dpdk-stable-18.02.2 /home/ubuntu/training/dpdk-container-lab/docker-build/testpmd/
-	mv /home/ubuntu/training/dpdk-container-lab/docker-build/testpmd/dpdk-stable-18.02.2 /home/ubuntu/training/dpdk-container-lab/docker-build/testpmd/dpdk
-	cd /home/ubuntu/training/dpdk-container-lab/docker-build/testpmd/dpdk
+	mv DPDK_in_Containers_Hands-on_Lab/dpdk-container-lab /home/vagrant/training
+	cd /home/vagrant
+	mv pktgen-dpdk /home/vagrant/training/dpdk-container-lab/docker-build/pktgen/
+	mv /home/vagrant/training/dpdk-container-lab/docker-build/pktgen/pktgen-dpdk /home/vagrant/training/dpdk-container-lab/docker-build/pktgen/pktgen
+	cp -r /home/vagrant/dpdk-stable-18.02.2 /home/vagrant/training/dpdk-container-lab/docker-build/testpmd/
+	mv /home/vagrant/training/dpdk-container-lab/docker-build/testpmd/dpdk-stable-18.02.2 /home/vagrant/training/dpdk-container-lab/docker-build/testpmd/dpdk
+	cd /home/vagrant/training/dpdk-container-lab/docker-build/testpmd/dpdk
         mv ../2M-hugepage.patch .
         patch -p1 -i 2M-hugepage.patch -b
-	chown -R ubuntu:ubuntu /home/ubuntu/training
+	chown -R ubuntu:ubuntu /home/vagrant/training
 	ln -s /usr/bin/automake-1.15 /usr/bin/automake-1.14
 	mkdir /mnt/huge
 	SHELL
